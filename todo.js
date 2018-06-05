@@ -68,10 +68,11 @@ else{
 //to make and update elements in the dom(page) when the add button is clicked
 click.addEventListener("click",function(){
   let b=document.querySelector("#input").value;
-  if(b!==localStorage.getItem("text"+(add-1))&&b!=="") { /*checks if the previously entered input is same as the current one and
+  if(b!==localStorage.getItem("text"+(add-1))&&b!==""&&b.trim().length>0) { /*checks if the previously entered input is same as the current one and
                                                            does not run if it is */
    create(b,add);
-   clearit(0);  //function called to check the condition in fun
+   clearit(0);
+     document.getElementById("input").value="";  //function called to check the condition in fun
 
   let selectDel=document.getElementById(add);       //to delete selected element on click of cross icon
     selectDel.addEventListener("click",function(){
@@ -116,7 +117,7 @@ click.addEventListener("click",function(){
 
 });
 
-let deleted=document.querySelectorAll(".cross");    //code deletes the elements 
+let deleted=document.querySelectorAll(".cross");    //code deletes the elements
 for(var i=0;i<deleted.length;i++){
 
 
