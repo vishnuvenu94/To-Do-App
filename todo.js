@@ -202,7 +202,7 @@ clearAll.addEventListener("click",function(){
      getclear[i].style.backgroundColor="#fc3a3a";
      },275*(i+0.4));
     })(i);
-
+ //iife used 
   (function (i) {
     setTimeout(function () {
 
